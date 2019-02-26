@@ -1,0 +1,51 @@
+    <navbar></navbar>
+<div class="pull-left col-md-12 col-sm-12 col-xs-12 padding-a-0 company-dt-cont" style="padding: .5rem 1rem;">
+<div class="card">
+        <div class="card-header"><b>Users</b>
+                <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#myModal">Add User</button>
+        </div>
+<div class="card-body">
+        <p class="mb-0">
+                An active user is a person who accesses an app for a given period of time. During this period each user is counted uniquely to provide an app developer with an accurate figure of how many people use an app, whether it be daily, weekly, or monthly.
+        </p>
+    </div>
+   
+<div class="table-responsive">
+<table class="table table-bordered " style="margin-bottom: 0rem;">
+    <thead class="thead-dark">
+        <th scope="col">#</th>
+        <th class="th-lg">Name</th>
+        <th class="th-lg">Display Name</th>
+        <th class="th-lg">Email</th>
+        <th class="th-xs">Status</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of lstUsers; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.Name}}</td>
+            <td>{{user.DisplayName}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.Status}}</td>
+       
+        </tr>
+    </tbody>
+</table>
+</div>
+<!-- <div class="card-footer">
+        Card Footer
+    </div> -->
+</div>
+<modalpopup [Name]="PopUpName" [data]="userform" (updatedata)=getdata($event)></modalpopup>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
